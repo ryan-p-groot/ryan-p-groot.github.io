@@ -272,13 +272,42 @@ section {
 }
 
 /* Projects Section */
+.projects {
+    background: var(--bg-white);
+}
+
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    display: flex;
     gap: 2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 1rem 0 2rem 0;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) var(--bg-light);
+    -webkit-overflow-scrolling: touch;
+}
+
+.projects-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
 }
 
 .project-card {
+    flex: 0 0 350px;
     background: var(--bg-white);
     border-radius: 15px;
     overflow: hidden;
@@ -289,73 +318,6 @@ section {
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-hover);
-}
-
-.project-image {
-    height: 200px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-}
-
-.project-placeholder {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.project-placeholder i {
-    font-size: 4rem;
-    color: white;
-    opacity: 0.7;
-}
-
-.project-content {
-    padding: 1.5rem;
-}
-
-.project-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: var(--text-dark);
-}
-
-.project-content p {
-    color: var(--text-light);
-    margin-bottom: 1rem;
-}
-
-.project-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.tech-tag {
-    background: var(--bg-light);
-    padding: 0.3rem 0.8rem;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    color: var(--text-dark);
-}
-
-.project-links {
-    display: flex;
-    gap: 1rem;
-}
-
-.project-link {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-}
-
-.project-link:hover {
-    color: var(--secondary-color);
 }
 
 /* Skills Section */
