@@ -231,6 +231,19 @@ section {
     gap: 3rem;
     align-items: center;
 }
+.about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image {
+    width: 300px !important;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+}
 
 .about-text p {
     margin-bottom: 1.5rem;
@@ -240,7 +253,9 @@ section {
 }
 
 .image-placeholder {
-    width: 100%;
+    width: 300px !important;
+    max-width: 300px !important;
+    height: 300px !important;
     aspect-ratio: 1;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 20px;
