@@ -558,14 +558,4 @@ section {
         flex-direction: column;
         align-items: center;
     }
-    
-  .profile-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 20px;
-    box-shadow: var(--shadow);
-    margin: 0 auto;
-    display: block;
-    }
 }
