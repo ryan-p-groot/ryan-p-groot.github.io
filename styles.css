@@ -548,11 +548,17 @@ section {
         align-items: center;
     }
 
-    .view-portfolio-banner {
+    .portfolio-pdf-section {
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+.view-portfolio-banner {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 16px;
     padding: 3rem 2.5rem;
-    margin: 3rem 0;
+    margin: 0 auto;
+    max-width: 900px;
     box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
     position: relative;
     overflow: hidden;
@@ -659,9 +665,13 @@ section {
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
+    .portfolio-pdf-section {
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+    }
+    
     .view-portfolio-banner {
         padding: 2.5rem 1.5rem;
-        margin: 2rem 0;
     }
     
     .view-portfolio-content {
