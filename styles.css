@@ -296,7 +296,7 @@ section {
 }
 
 .project-image {
-    height: 300px;
+    height: 400px;
     width: 100%;
     overflow: hidden;
     background: var(--bg-light);
@@ -312,7 +312,23 @@ section {
     height: auto;
     object-fit: contain;
     display: block;
-    padding: 15px;
+    padding: 20px;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.project-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
 }
 
 .project-placeholder {
@@ -325,7 +341,7 @@ section {
 }
 
 .project-placeholder i {
-    font-size: 4rem;
+    font-size: 6rem;
     color: white;
     opacity: 0.7;
 }
