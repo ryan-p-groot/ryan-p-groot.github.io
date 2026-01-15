@@ -547,4 +547,71 @@ section {
         flex-direction: column;
         align-items: center;
     }
+    .portfolio-download-banner {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-download-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.portfolio-download-content i.fa-file-pdf {
+    font-size: 3rem;
+    color: white;
+    opacity: 0.9;
+}
+
+.portfolio-download-text {
+    flex: 1;
+    min-width: 200px;
+    color: white;
+}
+
+.portfolio-download-text h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.portfolio-download-text p {
+    margin: 0;
+    opacity: 0.95;
+    font-size: 1rem;
+}
+
+.portfolio-download-content .btn {
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.portfolio-download-content .btn i {
+    font-size: 1rem;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .portfolio-download-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .portfolio-download-content i.fa-file-pdf {
+        font-size: 2.5rem;
+    }
+    
+    .portfolio-download-content .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
 }
