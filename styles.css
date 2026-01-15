@@ -550,68 +550,141 @@ section {
 
     .view-portfolio-banner {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    padding: 3rem 2.5rem;
+    margin: 3rem 0;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-portfolio-banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(-10%, -10%) rotate(180deg); }
+}
+
+.view-portfolio-banner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5), 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .view-portfolio-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.5rem;
+    gap: 2rem;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
 }
 
 .view-portfolio-content i.fa-file-pdf {
-    font-size: 3rem;
+    font-size: 4rem;
     color: white;
-    opacity: 0.9;
+    opacity: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
 }
 
 .view-portfolio-text {
     flex: 1;
-    min-width: 200px;
+    min-width: 250px;
     color: white;
 }
 
 .view-portfolio-text h3 {
-    margin: 0 0 0.5rem 0;
-    font-size: 1.5rem;
+    margin: 0 0 0.75rem 0;
+    font-size: 2rem;
+    font-weight: 700;
     color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: -0.5px;
 }
 
 .view-portfolio-text p {
     margin: 0;
     opacity: 0.95;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .view-portfolio-content .btn {
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: white;
+    color: #667eea;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.view-portfolio-content .btn:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    background: #f8f9fa;
+}
+
+.view-portfolio-content .btn:active {
+    transform: translateY(0) scale(1);
 }
 
 .view-portfolio-content .btn i {
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
+    .view-portfolio-banner {
+        padding: 2.5rem 1.5rem;
+        margin: 2rem 0;
+    }
+    
     .view-portfolio-content {
         flex-direction: column;
         text-align: center;
+        gap: 1.5rem;
     }
     
     .view-portfolio-content i.fa-file-pdf {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+    }
+    
+    .view-portfolio-text h3 {
+        font-size: 1.75rem;
+    }
+    
+    .view-portfolio-text p {
+        font-size: 1rem;
     }
     
     .view-portfolio-content .btn {
         width: 100%;
         justify-content: center;
+        padding: 0.9rem 1.5rem;
     }
 }
