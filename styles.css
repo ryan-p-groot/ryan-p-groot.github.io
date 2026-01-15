@@ -587,7 +587,7 @@ section {
     font-size: 1rem;
 }
 
-.portfolio-download-content .btn {
+.view-portfolio-content .btn {
     white-space: nowrap;
     display: inline-flex;
     align-items: center;
