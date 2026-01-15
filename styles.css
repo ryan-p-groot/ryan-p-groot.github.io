@@ -280,8 +280,9 @@ section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    width: 100%;
+    grid-auto-flow: row;
 }
-
 .project-card {
     background: var(--bg-white);
     border-radius: 15px;
